@@ -46,18 +46,10 @@
   }
   #player{
     position: fixed;
-    top: 50%;
-    left: 50%;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
     background-size: cover;
+    object-fit: cover;
     pointer-events:none
   }
   </style>
@@ -68,7 +60,7 @@
   </div>
 
   <div id="player">
-    <iframe src="https://player.vimeo.com/video/220835729?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0" width="1920" height="1080" frameborder="0"></iframe>
+    <iframe src="https://player.vimeo.com/video/220835729?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0" width="1920" height="1080" frameborder="0" allowfullscreen></iframe>
   </div>
 </body>
 <footer>
