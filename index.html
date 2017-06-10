@@ -26,15 +26,18 @@
     user-select: none;
     outline: 0;
   }
-  iframe{
-    position: absolute;
-top: 0;
-left: 0;
-margin: 0;
-padding: 0;
-width: 100%;
-height: 100%;
-border: 1px inset #7a8b8b;
+  .videoWrapper {
+  	position: relative;
+  	padding-bottom: 56.25%; /* 16:9 */
+  	padding-top: 25px;
+  	height: 0;
+  }
+  .videoWrapper iframe {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
   }
   .navigation{
     position: absolute;
@@ -71,7 +74,7 @@ border: 1px inset #7a8b8b;
     <a href=".">Video</a>&nbsp;/&nbsp;<a href="tour.html">Tour</a>&nbsp;/&nbsp;<a href="contact.html">Contact</a>
   </div>
 
-  <div id="player">
+  <div class="videoWrapper">
     <iframe src="https://player.vimeo.com/video/220835729?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0" width="1920" height="1080" frameborder="0"></iframe>
   </div>
 </body>
