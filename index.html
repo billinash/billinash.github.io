@@ -23,8 +23,12 @@
     user-select: none;
     outline: 0;
     text-rendering: geometricPrecision;
+  }
+  #loading{
     background-image:url("img/Loading.jpg");
     background-size: cover;
+    z-index:-100;
+    pointer-events: none;
   }
   a{
     color:inherit;
@@ -42,7 +46,7 @@
     background: black;
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
-    z-index: -100;
+    z-index: -90;
     pointer-events: none;
     /* overflow: hidden; */
   }
@@ -120,6 +124,7 @@
         <iframe src="https://player.vimeo.com/video/220835729?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
+    <div id="Loading"></div>
 
 </body>
 <footer>
