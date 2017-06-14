@@ -119,7 +119,7 @@
   </style>
   <script type="text/javascript">
     function toggle(name){
-      var element = document.getElementById('tour');
+      var element = document.getElementById(name);
       if(element.style.display!='block'){
         element.style.display='block';
       }
@@ -131,7 +131,7 @@
 </head>
 <body>
   <div id="links" class="navigation">
-    <a href="#" onclick="toggle()">Video</a>&nbsp;/&nbsp;<a href="#" onclick="toggle()">Tour</a>&nbsp;/&nbsp;<a href="#" onclick="toggle()">Contact</a>
+    <a href="#" onclick="toggle(video)">Video</a>&nbsp;/&nbsp;<a href="#" onclick="toggle(tour)">Tour</a>&nbsp;/&nbsp;<a href="#" onclick="toggle(contact)">Contact</a>
   </div>
 
   <div id="video" class="text">
