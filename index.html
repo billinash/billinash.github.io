@@ -117,6 +117,21 @@
     }
   }
   </style>
+  <script type="text/javascript">
+    function toggle(name) {
+      alert("h");
+      var element = document.getElementById('tour');
+        alert("heyde");
+      if(element.style.display==='none'){
+          alert("heyd");
+        element.style.display='block';
+      }
+          alert("hey");
+      else{
+        element.style.display='none';
+      }
+    }
+  </script>
 </head>
 <body>
   <div id="links" class="navigation">
@@ -143,22 +158,5 @@
       <iframe src="https://player.vimeo.com/video/220277207?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
-
-  <script>
-  function toggle(name) {
-    alert("h");
-    var element = document.getElementById('tour');
-      alert("heyde");
-    if(element.style.display==='none'){
-        alert("heyd");
-      element.style.display='block';
-    }
-        alert("hey");
-    else{
-      element.style.display='none';
-    }
-  }
-
-  </script>
 </body>
 </html>
