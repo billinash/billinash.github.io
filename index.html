@@ -123,14 +123,19 @@
     <a href="#" onclick="toggle(video)">Video</a>&nbsp;/&nbsp;<a href="#" onclick="toggle(tour)">Tour</a>&nbsp;/&nbsp;<a href="#" onclick="toggle(contact)">Contact</a>
   </div>
 
+  <div id="video" class="text">
+    Video<br><br>
+    (Video information here).
+  </div>
+
   <div id="tour" class="text">
     Tour Dates<br><br>
     (Tour information here).
   </div>
 
   <div id="contact" class="text">
-    Tour Dates<br><br>
-    (Tour information here).
+    Billi Nash, 98% Badass<br><br>
+    (Contact information here).
   </div>
 
   <div class="video-bg cover">
@@ -141,6 +146,7 @@
 
   <script>
   function toggle(name) {
+    alert("h");
     var element = document.getElementById('tour');
       alert("heyde");
     if(element.style.display==='none'){
