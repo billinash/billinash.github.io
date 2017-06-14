@@ -118,20 +118,26 @@
   }
   </style>
   <script type="text/javascript">
-    function toggle(name){
-      var element = document.getElementById(name);
-      if(element.style.display!='block'){
-        element.style.display='block';
-      }
-      else{
-        element.style.display='none';
-      }
+    function toggleVideo(){
+      vdocument.getElementById("video").style.display='block';
+      document.getElementById("tour").style.display='none';
+      document.getElementById("contact").style.display = 'none';
+    }
+    function toggleTour(){
+      vdocument.getElementById("video").style.display='none';
+      document.getElementById("tour").style.display='block';
+      document.getElementById("contact").style.display = 'none';
+    }
+    function toggleContact(){
+      vdocument.getElementById("video").style.display='none';
+      document.getElementById("tour").style.display='none';
+      document.getElementById("contact").style.display = 'block';
     }
   </script>
 </head>
 <body>
   <div id="links" class="navigation">
-    <a href="#" onclick="toggle("video")">Video</a>&nbsp;/&nbsp;<a href="#" onclick="toggle("tour")">Tour</a>&nbsp;/&nbsp;<a href="#" onclick="toggle("contact")">Contact</a>
+    <a href="#" onclick="toggleVideo()">Video</a>&nbsp;/&nbsp;<a href="#" onclick="toggleTour()">Tour</a>&nbsp;/&nbsp;<a href="#" onclick="toggleContact()">Contact</a>
   </div>
 
   <div id="video" class="text">
