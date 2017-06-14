@@ -143,16 +143,11 @@
   function toggle(name) {
     var element;
     element=document.getElementById(name);
-    if (isElementHidden(element)) {
-      element.style.display = '';
-      if (isElementHidden(element)) {
-        element.style.display = 'block';
-      }
-    } else {
-      element.style.display = 'none';
+    if(element.style.display=='none'){
+      element.style.display='block';
     }
-    function isElementHidden (element) {
-      return window.getComputedStyle(element, null).getPropertyValue('display') === 'none';
+    else{
+      element.style.display='none';
     }
         alert("hey");
   }
