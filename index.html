@@ -115,12 +115,12 @@
       background-size:cover;
       background-repeat: no-repeat;
     }
-	}
+  }
   </style>
 </head>
 <body>
   <div id="links" class="navigation">
-    <a href="index.html">Video</a>&nbsp;/&nbsp;<a href="tour.html">Tour</a>&nbsp;/&nbsp;<a href="contact.html">Contact</a>
+    <a href="#" onclick="toggle("video");return false;">Video</a>&nbsp;/&nbsp;<a href="#" onclick="toggle("tour");return false;">Tour</a>&nbsp;/&nbsp;<a href="#" onclick="toggle("contact");return false;">Contact</a>
   </div>
 
   <div id="tour" class="text">
@@ -133,11 +133,29 @@
     (Tour information here).
   </div>
 
-    <div class="video-bg cover">
-      <div class="video-fg">
-        <iframe src="https://player.vimeo.com/video/220277207?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen></iframe>
-      </div>
+  <div class="video-bg cover">
+    <div class="video-fg">
+      <iframe src="https://player.vimeo.com/video/220277207?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen></iframe>
     </div>
+  </div>
 
+  <script>
+  function toggle (name) {
+    var element;
+    element=document.getElementById(name).display;
+      if (isElementHidden(element)) {
+        element.style.display = '';
+        if (isElementHidden(element)) {
+          element.style.display = specifiedDisplay || 'block';
+        }
+      } else {
+        element.style.display = 'none';
+      }
+    function isElementHidden (element) {
+      return window.getComputedStyle(element, null).getPropertyValue('display') === 'none';
+    }
+  }
+}
+</script>
 </body>
 </html>
