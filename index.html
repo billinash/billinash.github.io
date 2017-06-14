@@ -120,7 +120,7 @@
 </head>
 <body>
   <div id="links" class="navigation">
-    <a href="#" onclick="toggle(video)">Video</a>&nbsp;/&nbsp;<a href="#" onclick="toggle(tour)">Tour</a>&nbsp;/&nbsp;<a href="#" onclick="toggle(contact)">Contact</a>
+    <a href="#" onclick="toggle("video")">Video</a>&nbsp;/&nbsp;<a href="#" onclick="toggle("tour")">Tour</a>&nbsp;/&nbsp;<a href="#" onclick="toggle("contact")">Contact</a>
   </div>
 
   <div id="tour" class="text">
@@ -143,10 +143,10 @@
   function toggle(name) {
     var element;
     element=document.getElementById(name);
-    alert("hey");
-    if(element.style.display=='none'){
+    if(element.style.display==='none'){
       element.style.display='block';
     }
+        alert("hey");
     else{
       element.style.display='none';
     }
