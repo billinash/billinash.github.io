@@ -131,7 +131,13 @@
     function toggleContact(){
       document.getElementById("video").style.display='none';
       document.getElementById("tour").style.display='none';
-      document.getElementById("contact").style.display = 'block';
+      var element = document.getElementById("contact")
+      if (element.style.display!='block'){
+        element.style.display = 'block';
+      }
+      else{
+        element.style.display = 'block';
+      }
     }
   </script>
 </head>
