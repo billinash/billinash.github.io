@@ -39,7 +39,7 @@
     position: absolute;
     width:100%;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     top:25%;
     display: none;
   }
@@ -118,15 +118,15 @@
       background-repeat: no-repeat;
     }
     .text{
-      font-size: 24px;
+      font-size: 22px;
     }
   }
   </style>
   <script type="text/javascript">
-    function toggleVideo(){
+    function toggleSocials(){
       document.getElementById("tour").style.display='none';
       document.getElementById("contact").style.display = 'none';
-      var element = document.getElementById("video")
+      var element = document.getElementById("socials")
       if (element.style.display!='block'){
         element.style.display = 'block';
       }
@@ -135,7 +135,7 @@
       }
     }
     function toggleTour(){
-      document.getElementById("video").style.display='none';
+      document.getElementById("socials").style.display='none';
       document.getElementById("contact").style.display = 'none';
       var element = document.getElementById("tour")
       if (element.style.display!='block'){
@@ -146,7 +146,7 @@
       }
     }
     function toggleContact(){
-      document.getElementById("video").style.display='none';
+      document.getElementById("socials").style.display='none';
       document.getElementById("tour").style.display='none';
       var element = document.getElementById("contact")
       if (element.style.display!='block'){
@@ -160,28 +160,33 @@
 </head>
 <body>
   <div id="links" class="navigation">
-    <a href="#" onclick="toggleVideo()">Video</a>&nbsp;/&nbsp;<a href="#" onclick="toggleTour()">Tour</a>&nbsp;/&nbsp;<a href="#" onclick="toggleContact()">Contact</a>
+    <a href="#" onclick="toggleSocials()">Socials</a>&nbsp;/&nbsp;<a href="#" onclick="toggleTour()">Tour</a>&nbsp;/&nbsp;<a href="#" onclick="toggleContact()">Contact</a>
   </div>
 
-  <div id="video" class="text">
-    Video<br><br>
+  <div id="socials" class="text">
+    Facebook: https://www.facebook.com/BilliNash/ <br>
+    Instagram: https://www.instagram.com/billinash/ <br>
+    Youtube: (coming soon) <br>
+    Twitter: https://twitter.com/sheisbilli <br>
+    Spotify: https://open.spotify.com/artist/18mJpYJsk6EcvCC2prLW7S
 
   </div>
 
   <div id="tour" class="text">
-    Tour Dates<br><br>
+    (No dates yet)
 
   </div>
 
   <div id="contact" class="text">
     Billi Nash, 98% Badass<br><br>
-
+    General: <a href="mailto:billinashmusic@gmail.com">billinashmusic@gmail.com</a><br>
+    Management: <a href="mailto:jgallagher@c3mgmt.com">jgallagher@c3mgmt.com</a>
   </div>
 
   <div class="video-bg cover">
     <div class="video-fg">
-      <!--<iframe src="https://player.vimeo.com/video/220277207?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen></iframe>
-    --></div>
+      <iframe src="https://player.vimeo.com/video/220277207?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0" frameborder="0" allowfullscreen></iframe>
+    </div>
   </div>
 </body>
 </html>
