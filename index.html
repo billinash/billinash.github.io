@@ -25,24 +25,26 @@
     text-rendering: geometricPrecision;
     background: linear-gradient(180deg, #3e30ab, #d12163, #e0e0b3);
     background-size: 600% 600%;
-    -webkit-animation: AnimationName 59s ease infinite;
-    -moz-animation: AnimationName 59s ease infinite;
-    animation: AnimationName 59s ease infinite;
-    @-webkit-keyframes AnimationName {
-  0%{background-position:0% 96%}
-  50%{background-position:100% 5%}
-  100%{background-position:0% 96%}
-}
-    @-moz-keyframes AnimationName {
-  0%{background-position:0% 96%}
-  50%{background-position:100% 5%}
-  100%{background-position:0% 96%}
-}
-    @keyframes AnimationName {
-  0%{background-position:0% 96%}
-  50%{background-position:100% 5%}
-  100%{background-position:0% 96%}
-}
+
+    -webkit-animation: backgroundAnimation 59s ease infinite;
+    -moz-animation: backgroundAnimation 59s ease infinite;
+    animation: backgroundAnimation 59s ease infinite;
+
+    @-webkit-keyframes backgroundAnimation {
+        0%{background-position:0% 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0% 96%}
+    }
+    @-moz-keyframes backgroundAnimation {
+        0%{background-position:0% 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0% 96%}
+    }
+    @keyframes backgroundAnimation {
+        0%{background-position:0% 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0% 96%}
+    }
   }
   a{
     color:inherit;
