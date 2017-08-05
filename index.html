@@ -4,8 +4,15 @@
   <title>BILLINASH</title>
   <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
   <style>
-
+  html, body, div{
+    margin: 0;
+    padding: 0;
+  }
   html{
+    width:100%;
+    height:100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
     font-family: 'Rock Salt', sans-serif;
     color: #fff;
     -webkit-touch-callout: none;
@@ -20,17 +27,21 @@
   body{
     background: linear-gradient(180deg, #3e30ab, #d12163, #e0e0b3);
     background-size: 600% 600%;
-
     -webkit-animation: backgroundAnimation 59s ease infinite;
     -moz-animation: backgroundAnimation 59s ease infinite;
+    -o-animation: backgroundAnimation 59s ease infinite;
     animation: backgroundAnimation 59s ease infinite;
-
     @-webkit-keyframes backgroundAnimation {
         0%{background-position:0% 96%}
         50%{background-position:100% 5%}
         100%{background-position:0% 96%}
     }
     @-moz-keyframes backgroundAnimation {
+        0%{background-position:0% 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0% 96%}
+    }
+    @-o-keyframes backgroundAnimation {
         0%{background-position:0% 96%}
         50%{background-position:100% 5%}
         100%{background-position:0% 96%}
