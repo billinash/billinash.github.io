@@ -6,9 +6,14 @@
     <meta name="description" content="Lena Ozea">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
       
     <style amp-custom>        
-     body {
+    @font-face {
+        font-family: 'Wire';
+        src: url('font/Wire.woff2') format('woff2'), url('font/Wire.woff') format('woff');
+      }
+        body {
         margin: 0;
         padding: 0;
         color:#ffffff;
@@ -58,14 +63,12 @@
 
     <link rel="canonical" href=".">
     <title>Lena Ozea</title>
-  </head>
+    </head>
   <body>  
       <div id="background">
           <amp-img class="cover" alt="Lena Ozea Poster" src="/img/background.webp" srcset="/img/background_large.webp 1500w" layout="fill" width="1920" height="1920">
-<!--
 			<amp-img fallback class="cover" alt="Lena Ozea Poster" src="/img/background.jpg" srcset="/img/background_large.jpg 1480w" layout="fill" width="1920" height="1920">
 			</amp-img>
--->
 		  </amp-img> 
       </div>
   </body>
