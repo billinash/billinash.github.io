@@ -6,14 +6,49 @@
     <meta name="description" content="Lena Ozea">
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <!-- Import other AMP Extensions here -->
-    <style amp-custom>
+      
+    <style amp-custom>        
+     body {
+        margin: 0;
+        padding: 0;
+        color:#ffffff;
+        background:#16161d;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-variant: normal;
+        line-height: 20px;
+      }
+      a{
+        color:inherit;
+        font-style:inherit;
+        text-decoration: inherit;
+        outline:none;
+        font-weight:inherit;
+        background-color: transparent;
+        font-weight:bold;
+      }
+      a:hover {
+        color:#007fff;
+        cursor: pointer;
+      }
+      q {
+        quotes: "\201C" "\201D" "\2018" "\2019";
+      }
+      sup, sub {
+        vertical-align: baseline;
+        position: relative;
+        top: -0.4em;
+      }
+      sub {
+        top: 0.4em;
+      }
         #background{
             position:absolute;
             top:0;
             left:0;
-            width:100%;
-            height:100%;
+            width:100vw;
+            height:100vh;
         }
         amp-img.cover img {
            object-fit: cover;
@@ -27,8 +62,10 @@
   <body>  
       <div id="background">
           <amp-img class="cover" alt="Lena Ozea Poster" src="/img/background.webp" srcset="/img/background_large.webp 1500w" layout="fill" width="1920" height="1920">
+<!--
 			<amp-img fallback class="cover" alt="Lena Ozea Poster" src="/img/background.jpg" srcset="/img/background_large.jpg 1480w" layout="fill" width="1920" height="1920">
 			</amp-img>
+-->
 		  </amp-img> 
       </div>
   </body>
