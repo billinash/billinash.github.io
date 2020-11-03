@@ -115,18 +115,18 @@
       
     <svg>
       <filter id="turbulence" x="0" y="0" width="100%" height="100%">
-          <feTurbulence id="sea-filter" type="turbulence" numOctaves="1" seed="1" baseFrequency="0.002 0.004"></feTurbulence>        
+          <feTurbulence id="sea-filter" type="turbulence" numOctaves="1" seed="3" baseFrequency="0.002 0.004"></feTurbulence>        
         <feDisplacementMap scale="6" in="SourceGraphic"></feDisplacementMap>
-          <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="60s" 
+          <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="70s" 
         keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.07;0.02 0.06" repeatCount="indefinite"/>
       </filter>
     </svg>
       
      <svg>
       <filter id="turbulence2" x="0" y="0" width="100%" height="100%">
-          <feTurbulence id="sea-filter" type="turbulence" numOctaves="1" seed="1" baseFrequency="0.002 0.004"></feTurbulence>        
-        <feDisplacementMap scale="12" in="SourceGraphic"></feDisplacementMap>
-          <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="60s" 
+          <feTurbulence id="sea-filter2" type="turbulence" numOctaves="2" seed="2" baseFrequency="0.002 0.004"></feTurbulence>        
+        <feDisplacementMap scale="14" in="SourceGraphic"></feDisplacementMap>
+          <animate xlink:href="#sea-filter2" attributeName="baseFrequency" dur="70s" 
         keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.07;0.02 0.06" repeatCount="indefinite"/>
       </filter>
     </svg>
