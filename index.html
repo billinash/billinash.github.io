@@ -1,226 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>BILLINASH</title>
-  <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
-  <style>
-  html, body, div{
-    margin: 0;
-    padding: 0;
-  }
-  html{
-    width:100%;
-    height:100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    font-family: 'Rock Salt', sans-serif;
-    color: #fff;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    outline: 0;
-    text-rendering: geometricPrecision;
-  }
-  body{
-    background: linear-gradient(180deg, #3e30ab, #e0164f, #e0e0b3);
-    background-size: 600% 600%;
-    -webkit-animation: backgroundAnimation 20s ease infinite;
-    -moz-animation: backgroundAnimation 20s ease infinite;
-    -o-animation: backgroundAnimation 20s ease infinite;
-    animation: backgroundAnimation 20s ease infinite;
-  }
-    @-webkit-keyframes backgroundAnimation {
-        0%{background-position:0% 96%}
-        50%{background-position:100% 5%}
-        100%{background-position:0% 96%}
-    }
-    @-moz-keyframes backgroundAnimation {
-        0%{background-position:0% 96%}
-        50%{background-position:100% 5%}
-        100%{background-position:0% 96%}
-    }
-    @-o-keyframes backgroundAnimation {
-        0%{background-position:0% 96%}
-        50%{background-position:100% 5%}
-        100%{background-position:0% 96%}
-    }
-    @keyframes backgroundAnimation {
-        0%{background-position:0% 96%}
-        50%{background-position:100% 5%}
-        100%{background-position:0% 96%}
-    }
+<!doctype html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="description" content="Lena Ozea">
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- Import other AMP Extensions here -->
+    <style amp-custom>
+    /* Add your styles here */
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
-  a{
-    color:inherit;
-    text-decoration:inherit;
-  }
-  .navigation{
-    position: absolute;
-    font-size: 5.2vw;
-    top:57%;
-    width:100%;
-    text-align: center;
-  }
-  .text{
-    font-family:'Helvetica','Arial', sans-serif;
-    font-weight: bold;
-    position: absolute;
-    width:100%;
-    text-align: center;
-    font-size: 15px;
-    line-height: 28px;
-    top:36%;
-    display: none;
-  }
-  .video-bg {
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    z-index: -90;
-    pointer-events: none;
-    /* overflow: hidden; */
-  }
-  .video-bg .video-fg,
-  .video-bg iframe,
-  .video-bg video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  @media (min-aspect-ratio: 16/9) {
-    .video-bg.cover .video-fg { height: 300%; top: -100%; }
-  }
-  @media (max-aspect-ratio: 16/9) {
-    .video-bg.cover .video-fg { width: 300%; left: -100%; }
-  }
-
-  @supports (object-fit: cover) {
-    .video-bg.cover .video-fg.supports-cover {
-      width: 100%;
-      height: 100%;
-      top: 0; left: 0;
-    }
-    .video-bg.cover video {
-      object-fit: cover;
-    }
-  }
-  .video-bg.contain {
-    font-size: 0;
-  }
-  .video-bg.contain * {
-    font-size: 16px;
-  }
-  .video-bg.contain:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-  }
-  .video-bg.contain .video-fg {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 */
-    pointer-events: none;
-  }
-  img{
-    width:6vw;
-    padding:.4vw;
-  }
-  @media (min-aspect-ratio: 16/9) {
-    .video-bg.contain .video-fg {
-      height: 100%;
-      padding-bottom: 0;
-      max-width: (unit(@size, vh) * 16 / 9);
-      left: 50%;
-      margin-left: (unit(@size, vh) * 16 / 9) / -2;
-    }
-  }
-  @media only screen and (max-device-width: 640px) {
-    .video-bg{
-      display: none;
-    }
-    .navigation{
-      font-size: 6.2vw;
-    }
-    .text{
-      font-size: 38px;
-      line-height: 50px;
-    }
-    img{
-      width:12vw;
-    }
-  }
-  </style>
-  <script type="text/javascript">
-    function toggleSocials(){
-      document.getElementById("tour").style.display='none';
-      document.getElementById("contact").style.display = 'none';
-      var element = document.getElementById("socials")
-      if (element.style.display!='block'){
-        element.style.display = 'block';
-      }
-      else{
-        element.style.display = 'none';
-      }
-    }
-    function toggleTour(){
-      document.getElementById("socials").style.display='none';
-      document.getElementById("contact").style.display = 'none';
-      var element = document.getElementById("tour")
-      if (element.style.display!='block'){
-        element.style.display = 'block';
-      }
-      else{
-        element.style.display = 'none';
-      }
-    }
-    function toggleContact(){
-      document.getElementById("socials").style.display='none';
-      document.getElementById("tour").style.display='none';
-      var element = document.getElementById("contact")
-      if (element.style.display!='block'){
-        element.style.display = 'block';
-      }
-      else{
-        element.style.display = 'none';
-      }
-    }
-  </script>
-</head>
-<body>
-  <div id="links" class="navigation">
-    <a href="#" onclick="toggleSocials()">Social</a>&nbsp;/&nbsp;<a href="#" onclick="toggleTour()">Tour</a>&nbsp;/&nbsp;<a href="#" onclick="toggleContact()">Contact</a>
-  </div>
-
-  <div id="socials" class="text">BILLI NASH<br><br>
-    <a target="_blank" href="https://www.facebook.com/BilliNash/"><img src="img/facebook.png" alt="https://www.facebook.com/BilliNash/"></img></a>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="https://www.instagram.com/billinash/"><img src="img/instagram.png" alt="https://www.instagram.com/billinash/"></img></a>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="https://twitter.com/sheisbilli"><img src="img/twitter.png" alt="https://twitter.com/sheisbilli"></img></a>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="https://open.spotify.com/artist/18mJpYJsk6EcvCC2prLW7S"><img src="img/spotify.png" alt="https://open.spotify.com/artist/18mJpYJsk6EcvCC2prLW7S"></img></a>&nbsp;&nbsp;&nbsp;&nbsp;
-
-  </div>
-
-  <div id="tour" class="text">BILLI NASH<br><br>
-    No dates yet.
-
-  </div>
-
-  <div id="contact" class="text">BILLI NASH<br><br>
-    General: <a target="_blank" href="mailto:billinashmusic@gmail.com">billinashmusic@gmail.com</a><br>
-    Management: <a target="_blank" href="mailto:jgallagher@c3mgmt.com">jgallagher@c3mgmt.com</a>
-  </div>
-
-  <div class="video-bg cover">
-    <div class="video-fg">
-      <iframe src="https://www.youtube.com/embed/1nBo5k_dmbc?autoplay=1&controls=0&showinfo=0&rel=0&start=17&loop=1&playlist=1nBo5k_dmbc&modestbranding=1" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-</body>
+    <link rel="canonical" href=".">
+    <title>Lena Ozea</title>
+  </head>
+  <body>
+    <h1>Lena Ozea</h1>
+      
+      <div id="background">
+          <amp-img alt="Lena Ozea Poster" src="/img/background.webp" srcset="/img/background_large.webp 1500w" layout="cover" width="1920" height="1920">
+			<amp-img fallback alt="Lena Ozea Poster" src="/img/background.jpg" srcset="/img/background_large.jpg 1480w" layout="cover" width="1920" height="1920">
+			</amp-img>
+		  </amp-img> 
+      </div>
+  </body>
 </html>
