@@ -70,19 +70,6 @@
         amp-img.cover img {
            object-fit: cover;
          }
-        @-webkit-keyframes filter-animation {
-          0% {
-            -webkit-filter: blur(0) saturate(1);
-          }
-
-          50% {
-            -webkit-filter: blur(20) saturate(.7);
-          }
-
-          100% {
-            -webkit-filter: blur(0) saturate(1);
-          }
-}
         #title{
             position:absolute;
             top:30vh;
@@ -99,10 +86,12 @@
             font-weight:100;
             margin:0;
             padding:0;
-            text-shadow: 0px 0px 1px #ffffff;
+            text-shadow: 0px 0px 2px #ffffff;
+            transition: 5s;
+            animation: all;
         }
         h1:hover{
-            text-shadow: 0px 0px 3px #ffffff;
+            font-weight:500;            
         }
         #socials{
             position:absolute;
