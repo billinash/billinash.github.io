@@ -48,6 +48,15 @@
       sub {
         top: 0.4em;
       }
+    .noselect {
+          -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+             -khtml-user-select: none; /* Konqueror HTML */
+               -moz-user-select: none; /* Old versions of Firefox */
+                -ms-user-select: none; /* Internet Explorer/Edge */
+                    user-select: none; /* Non-prefixed version, currently
+                                          supported by Chrome, Edge, Opera and Firefox */
+        }
         #background{
             position:absolute;
             top:0;
@@ -86,7 +95,7 @@
 			</amp-img>
 		  </amp-img> 
       </div>
-      <div id="title">
+      <div id="title" class="noselect">
           <h1>LENA ' OZEA</h1>
       </div>
   </body>
