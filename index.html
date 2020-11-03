@@ -64,9 +64,11 @@
             width:100vw;
             height:100vh;
         }
+        .water{
+            filter: url("#turbulence");
+        }
         amp-img.cover img {
            object-fit: cover;
-            -webkit-animation: filter-animation 5s infinite;
          }
         @-webkit-keyframes filter-animation {
           0% {
@@ -115,17 +117,26 @@
     </head>
   <body>  
       <div id="background">
-          <amp-img class="cover" alt="Lena Ozea Poster" src="/img/background.webp" srcset="/img/background_l.webp 1800w, /img/background_m.webp 1200w" layout="fill" width="1920" height="1920">
+          <amp-img class="cover water" alt="Lena Ozea Poster" src="/img/background.webp" srcset="/img/background_l.webp 1800w, /img/background_m.webp 1200w" layout="fill" width="1920" height="1920">
 			<amp-img fallback class="cover" alt="Lena Ozea Poster" src="/img/background.jpg" srcset="/img/background_l.jpg 1800w, /img/background_m.jpg 1200w" layout="fill" width="1920" height="1920">
 			</amp-img>
 		  </amp-img> 
       </div>
       
-      <div id="title" class="noselect">
+      <div id="title" class="noselect water">
           <h1>LENA / OZEA</h1>
       </div>
       
-      <div id="socials">
+      <div id="socials" class="noselect water">
       </div>
+      
+    <svg>
+      <filter id="turbulence" x="0" y="0" width="100%" height="100%">
+        <feTurbulence id="sea-filter" numOctaves="3" seed="2" baseFrequency="0.02 0.05"></feTurbulence>
+        <feDisplacementMap scale="10" in="SourceGraphic"></feDisplacementMap>
+        <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="60s" 
+        keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.08;0.02 0.06" repeatCount="indefinite"/>
+      </filter>
+    </svg>
   </body>
 </html>
