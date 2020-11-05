@@ -14,7 +14,7 @@
         margin: 0;
         padding: 0;
         color:#ffffff;
-        background:#16161d;
+        background:#000000;
         font-family: Arial, sans-serif;
         font-size: 14px;
         font-style: normal;
@@ -71,7 +71,7 @@
         }
         #title{
             position:absolute;
-            top:38vh;
+            top:45vh;
             left:0;
             width:100%;
             transform: translateY(-50%);
@@ -87,28 +87,39 @@
             padding:0;
             opacity:1;
         }
-        h1:hover #background{
-            opacity:.5;
-        }
         #socials{
-            display:block;
-            height:18px;
-            width:340px;
+            height:2.5vh;
+            width:35vh;
               margin-left: auto;
               margin-right: auto;
+            min-height:18px;
+            min-width:250px;
             position: relative;
-            top:30px;
+            top:4vh;
         }
         .icon {
             fill:#ffffff;            
-            width:80px;
-            height:18px;
+            width:8vh;
+            height:2.5vh;
+            min-height:18px;
+            min-width:57.6px;
             margin:0;
             padding:0;
             opacity:1;
         }
-        .icon:hover{
-            opacity:1;
+        .parent:hover > svg {
+          opacity: 0.2;
+        }
+        .parent:hover > svg:hover {
+          opacity: 1.0;
+        }
+        .parent:hover > div {
+          opacity: 0.75;
+            transition:.2s;
+        }
+        .parent:hover > div:hover {
+          opacity: 1.0;
+            transition:.2s;
         }
 @media only screen and (max-device-width: 600px) {
         .water{
@@ -118,14 +129,15 @@
     </style>
     </head>
   <body>  
+      <div class="parent">
       <div id="background" class="water">
       </div>
       
       <div id="title" class="noselect">
-          <h1>LENA /<br> OZEA</h1>
+          <h1>LENA &nbsp;/<br> &nbsp;&nbsp;OZEA</h1>
       </div>
       
-      <div id="socials" class="noselect">
+      <div id="socials" class="noselect parent">
          
           <svg version="1.1" id="Mail" class="icon" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m22.437 6.554-9.958-5.432c-.299-.163-.659-.163-.958 0l-9.957 5.432c-.965.525-1.564 1.534-1.564 2.634v10.812c0 1.654 1.346 3 3 3h18c1.654 0 3-1.346 3-3v-10.812c0-1.1-.599-2.109-1.563-2.634zm-19.916 1.756 9.479-5.171 9.479 5.17c.321.176.521.512.521.879v1.249l-9.414 4.917c-.361.187-.811.187-1.169.002l-9.417-4.919v-1.249c0-.367.2-.703.521-.878z"/></svg>
           
@@ -146,6 +158,7 @@
 			C480.224,136.96,497.728,118.496,512,97.248z"/></svg>
           
       </div>
+    </div> 
       
     <svg>
       <filter id="turbulence" x="0" y="0" width="100%" height="100%">
@@ -159,8 +172,8 @@
      <svg>
       <filter id="turbulence2" x="0" y="0" width="100%" height="100%">
           <feTurbulence id="sea-filter2" type="turbulence" result="NOISE2" numOctaves="1" seed="5" baseFrequency="0.005 0.01"></feTurbulence>        
-        <feDisplacementMap in2="NOISE2" scale="10" in="SourceGraphic"></feDisplacementMap>
-          <animate xlink:href="#sea-filter2" attributeName="baseFrequency" dur="40s" 
+        <feDisplacementMap in2="NOISE2" scale="12" in="SourceGraphic"></feDisplacementMap>
+          <animate xlink:href="#sea-filter2" attributeName="baseFrequency" dur="30s" 
         keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.07;0.02 0.06" repeatCount="indefinite"/>
       </filter>
     </svg>
