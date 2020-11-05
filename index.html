@@ -75,13 +75,13 @@
             left:0;
             width:100%;
             transform: translateY(-50%);
+            color:#ffffff;
         }
         h1{
             font-family: Wire, sans-serif;
             font-size: 20vh;
             line-height: 18vh;
-            text-align: center;
-            color:#ffffff;
+            text-align: center;            
             font-weight:100;
             margin:0;
             padding:0;
@@ -107,22 +107,17 @@
             padding:0;
             opacity:1;
         }
-        .parent:hover > svg {
-          opacity: 0.75;
-            transition:.3s;
+        .icon:hover, .icon:active{
+            fill:#ff0060;
+            mix-blend-mode: screen;
+            filter:blur(.7px);
         }
-        .parent:hover > svg:hover {
-          opacity: 1.0;
-            transition:.3s;
+        #title:hover, #title:active{
+            color:#ff0060;
+            text-shadow: 0 0 6px #ff0060, 0 0 20px rgba(255,0,96,0.5),0 0 120px rgba(255,0,96,0.2);
+            mix-blend-mode: screen;
         }
-        .parent:hover > div {
-          opacity: 0.75;
-            transition:.3s;
-        }
-        .parent:hover > div:hover {
-          opacity: 1.0;
-            transition:.3s;
-        }
+
 @media only screen and (max-device-width: 600px) {
         .water{
             filter: url("#turbulence2");
@@ -131,7 +126,6 @@
     </style>
     </head>
   <body>  
-      <div class="parent">
       <div id="background" class="water">
       </div>
       
@@ -160,13 +154,12 @@
 			C480.224,136.96,497.728,118.496,512,97.248z"/></svg>
           
       </div>
-    </div> 
       
     <svg>
       <filter id="turbulence" x="0" y="0" width="100%" height="100%">
           <feTurbulence id="sea-filter" type="turbulence" result="NOISE" numOctaves="1" seed="5" baseFrequency="0.005 0.01"></feTurbulence>        
         <feDisplacementMap in2="NOISE" scale="5" in="SourceGraphic"></feDisplacementMap>
-          <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="40s" 
+          <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="30s" 
         keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.07;0.02 0.06" repeatCount="indefinite"/>
       </filter>
     </svg>
